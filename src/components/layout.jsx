@@ -6,6 +6,13 @@ const Layout = () =>{
         <>
             <div className="row mt-5">
                 <div className="col-4 text-start">
+                    <nav>
+                        <ul>
+                            <li style={{display: "inline", marginRight: "15px"}}>
+                                <Link to="/" style={{textDecoration: "none"}}>Home</Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <div className="col-4"><Banner/></div>
                 <div className="col-4 text-end">
