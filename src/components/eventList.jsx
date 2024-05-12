@@ -23,7 +23,7 @@ const EventList = () => {
 
     return(
         <>
-            <div className="row mt-5">
+            <div className="row mt-4 mb-5">
             {events.map((event) => 
                 <div className="col-4">
                     <div className="card" style={{width: "18rem;"}}>
