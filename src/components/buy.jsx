@@ -19,7 +19,7 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(inputs),
   };
-  fetch("https://localhost:7017/event", requestOptions).then((response) => {
+  fetch("https://localhost:7017/ticket", requestOptions).then((response) => {
     console.log("status code", response.status);
   });
   navigate("/confirm");
