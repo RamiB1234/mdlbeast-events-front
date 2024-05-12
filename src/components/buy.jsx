@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 const Buy = () =>{
     return (
       <div className="row mt-3">
@@ -19,9 +21,7 @@ const Buy = () =>{
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">
-              Submit
-            </button>
+            <Link to={{pathname: '/confirm'}} ><button class="btn btn-primary">Pay</button></Link>
           </form>
         </div>
         <div className="col-4"></div>
