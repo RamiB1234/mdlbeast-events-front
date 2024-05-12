@@ -16,15 +16,21 @@ const EventList = () => {
 
     return (
       <div className="row mt-4 mb-5">
-        {events && events.length>0 && events.map((event) => (
+        {events && events.length > 0 && events.map((event) => (
           <div className="col-4" key={event.id}>
             <div className="card" style={{ width: "26rem" }}>
-              <img
-                className="card-img-top"
-                src="/image.png"
-                alt="Card image cap"
-                style={{ width: "415px", height: "350px" }}
-              />
+              <Link
+                to={{ pathname: "/event" }}
+                state={{ event }}
+                className="card-link"
+              >
+                <img
+                  className="card-img-top"
+                  src={"https://localhost:7017/" + event.imageURL}
+                  alt="Card image cap"
+                  style={{ width: "415px", height: "350px" }}
+                />
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">{event.name}</h5>
                 <p className="card-text">
