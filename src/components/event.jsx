@@ -15,7 +15,7 @@ const Event = () =>{
                 <div className='col-8'>
                     <h1>{location.state.event.name}</h1>
                     <p>{location.state.event.description}</p>
-                    <Link to={{pathname: '/buy'}} ><button className='btn btn-primary'>Pay Now</button></Link>
+                    <Link to={{pathname: '/buy'}} state={{eventName: location.state.event.name}} ><button className='btn btn-primary'>Pay Now</button></Link>
                 </div>
             </div>
         </>
