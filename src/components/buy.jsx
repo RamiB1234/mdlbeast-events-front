@@ -50,9 +50,6 @@ const handleSubmit = (event) => {
                 value={inputs.email} 
                 onChange={handleChange}
               />
-              <div id="emailHelp" className="form-text">
-                We'll never share your email with anyone else.
-              </div>
             </div>
             <input type='hidden' id='eventName' name='eventName' />
             <button className="btn btn-primary">Pay</button>

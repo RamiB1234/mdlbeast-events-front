@@ -1,23 +1,35 @@
 import { useState, useEffect } from "react";
+import { useAuth } from "../utils/authProvider";
 
 const TicketList = () => {
     const [tickets, setTickets] = useState([]);
-
+    const { authToken } = useAuth();  // Get the token from the auth context
 
     useEffect(() => {
-        fetch("https://localhost:7017/ticket")
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            setTickets(response);
-        })
-      },[])
+        console.log('AuthToken:', authToken);  // Log the authToken to ensure it's correct
+        const headers = authToken ? { 'Authorization': `Bearer ${authToken}` } : {};
+        fetch("https://localhost:7017/ticket", { headers })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`); // More specific error
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Fetch successful:', data);
+                setTickets(data);
+            })
+            .catch(error => {
+                console.error('Fetch error:', error.message); // Log specific error message
+            });
+    }, [authToken]);  // Ensure effect runs when authToken changes
+    
 
     return(
         <>
             <div className="text-center mt-3">
                 <h1>Ticket List</h1>
-                <table class="table table-dark mt-5">
+                <table className="table table-dark mt-5">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
