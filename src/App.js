@@ -4,6 +4,7 @@ import Layout from './components/layout';
 import Event from './components/event';
 import Buy from "./components/buy";
 import Confirm from "./components/confirm";
+import TicketList from "./components/ticketList";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="event" element={<Event />} />
           <Route path="buy" element={<Buy />} />
           <Route path="confirm" element={<Confirm />} />
+          <Route path="ticketlist" element={<TicketList />} />
         </Route>
       </Routes>
     </BrowserRouter>
