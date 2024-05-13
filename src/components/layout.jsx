@@ -19,7 +19,7 @@ const Layout = () =>{
                     <nav>
                         <ul>
                             <li style={{display: "inline", marginRight: "15px"}}>
-                                Admin Log In
+                                <Link to="/login" style={{textDecoration: "none"}}>Admin Log In</Link>
                             </li>
                         </ul>
                     </nav>
