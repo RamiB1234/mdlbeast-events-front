@@ -7,6 +7,7 @@ import Confirm from "./components/confirm";
 import TicketList from "./components/ticketList";
 import Login from "./components/login";
 import {ProtectedRoute} from "./utils/protectedRoute";
+import Scanner from "./components/scanner";
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
           <Route path="ticketlist" element={
             <ProtectedRoute>
               <TicketList />
+            </ProtectedRoute>
+          } />
+          <Route path="scanner" element={
+            <ProtectedRoute>
+              <Scanner />
             </ProtectedRoute>
           } />
           <Route path="login" element={<Login />} />

@@ -22,9 +22,14 @@ const Layout = () =>{
                                 <Link to="/" style={{textDecoration: "none"}}>Home</Link>
                             </li>
                             {authToken && (
-                                <li style={{display: "inline", marginRight: "15px"}}>
-                                    <Link to="/ticketlist" style={{textDecoration: "none"}}>Ticket List</Link>
-                                </li>
+                                <>
+                                    <li style={{ display: "inline", marginRight: "15px" }}>
+                                        <Link to="/ticketlist" style={{ textDecoration: "none" }}>Ticket List</Link>
+                                    </li>
+                                    <li style={{ display: "inline", marginRight: "15px" }}>
+                                        <Link to="/scanner" style={{ textDecoration: "none" }}>Scanner</Link>
+                                    </li>
+                                </>
                             )}
                         </ul>
                     </nav>
