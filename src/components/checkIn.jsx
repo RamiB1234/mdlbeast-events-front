@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Scanner = () => {
+const CheckIn = () => {
 
     const [inputs, setInputs] = useState({});
 
@@ -19,7 +19,7 @@ const Scanner = () => {
             <div className="row mt-3">
                 <div className="col-4"></div>
                 <div className="col-4">
-                    <h1>Scanner</h1>
+                    <h1>Check-In</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3 mt-3">
                             <label className="form-label">Name</label>
@@ -39,4 +39,4 @@ const Scanner = () => {
     );
 };
 
-export default Scanner;
+export default CheckIn;

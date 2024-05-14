@@ -7,7 +7,7 @@ import Confirm from "./components/confirm";
 import TicketList from "./components/ticketList";
 import Login from "./components/login";
 import {ProtectedRoute} from "./utils/protectedRoute";
-import Scanner from "./components/scanner";
+import CheckIn from "./components/checkIn";
 
 function App() {
   return (
@@ -23,9 +23,9 @@ function App() {
               <TicketList />
             </ProtectedRoute>
           } />
-          <Route path="scanner" element={
+          <Route path="checkin" element={
             <ProtectedRoute>
-              <Scanner />
+              <CheckIn />
             </ProtectedRoute>
           } />
           <Route path="login" element={<Login />} />

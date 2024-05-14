@@ -27,7 +27,7 @@ const Layout = () =>{
                                         <Link to="/ticketlist" style={{ textDecoration: "none" }}>Ticket List</Link>
                                     </li>
                                     <li style={{ display: "inline", marginRight: "15px" }}>
-                                        <Link to="/scanner" style={{ textDecoration: "none" }}>Scanner</Link>
+                                        <Link to="/checkin" style={{ textDecoration: "none" }}>CheckIn</Link>
                                     </li>
                                 </>
                             )}
