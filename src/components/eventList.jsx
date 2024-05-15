@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const EventList = () => {
     const [events, setEvents] = useState([]);
-
+    const apiUrl = process.env.REACT_APP_API_URL; 
 
     useEffect(() => {
       const apiUrl = process.env.REACT_APP_API_URL;
@@ -27,7 +27,7 @@ const EventList = () => {
               >
                 <img
                   className="card-img-top"
-                  src={"https://localhost:7017/" + event.imageURL}
+                  src={`${apiUrl}/` + event.imageURL}
                   alt="thumbnail"
                   style={{ width: "415px", height: "350px" }}
                 />
