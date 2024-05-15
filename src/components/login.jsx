@@ -17,10 +17,12 @@
       
       const handleSubmit = async (event) => {
         event.preventDefault();
+        const apiUrl = process.env.REACT_APP_API_URL; 
+        
         setError(''); // Clear previous errors
 
         try {
-          const response = await fetch('https://localhost:7017/auth/login', {
+          const response = await fetch(`${apiUrl}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username: inputs.userName, password: inputs.password })

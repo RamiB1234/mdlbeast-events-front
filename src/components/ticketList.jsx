@@ -8,7 +8,8 @@ const TicketList = () => {
     useEffect(() => {
         console.log('AuthToken:', authToken);  // Log the authToken to ensure it's correct
         const headers = authToken ? { 'Authorization': `Bearer ${authToken}` } : {};
-        fetch("https://localhost:7017/ticket", { headers })
+        const apiUrl = process.env.REACT_APP_API_URL; 
+        fetch(`${apiUrl}/ticket`, { headers })
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`); // More specific error

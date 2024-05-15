@@ -14,12 +14,14 @@ const Buy = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const apiUrl = process.env.REACT_APP_API_URL;
+
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(inputs),
     };
-    fetch("https://localhost:7017/ticket", requestOptions).then((response) => {
+    fetch(`${apiUrl}/ticket`, requestOptions).then((response) => {
       console.log("status code", response.status);
     });
     navigate("/confirm");

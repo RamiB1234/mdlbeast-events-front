@@ -6,13 +6,14 @@ const EventList = () => {
 
 
     useEffect(() => {
-        fetch("https://localhost:7017/event")
-        .then(response => response.json())
-        .then(response => {
-            console.log(response)
-            setEvents(response);
-        })
-      },[])
+      const apiUrl = process.env.REACT_APP_API_URL;
+      fetch(`${apiUrl}/event`)
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+          setEvents(response);
+        });
+    }, []);
 
     return (
       <div className="row mt-4 mb-5">
@@ -27,7 +28,7 @@ const EventList = () => {
                 <img
                   className="card-img-top"
                   src={"https://localhost:7017/" + event.imageURL}
-                  alt="Card image cap"
+                  alt="thumbnail"
                   style={{ width: "415px", height: "350px" }}
                 />
               </Link>
