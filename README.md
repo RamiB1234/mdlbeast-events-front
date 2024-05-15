@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# MDLBeast Events (Client)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Events](https://github.com/RamiB1234/mdlbeast-events-front/blob/master/README_Images/mdlBeastLogo.png?raw=true)
 
-## Available Scripts
+This is the frontend of the event system. Please check the [server repository](https://github.com/RamiB1234/mdlbeast-events-server) as well.
 
-In the project directory, you can run:
+## Introduction
+This is the frontend for managing the MDLBeast Events. It's a SPA that's developed in React 18
 
-### `npm start`
+It's a demo I developed to demonstrate my abilities in the technology stack needed for the Fullstack Engineer technical interview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The system is a simulation for an event/ticketing system that has the following features:
+- Browsing currently available events
+- Displaying more information about an event
+- Purchasing a ticket (actual payment is beyound the scope of the demo)
+- Receiving the ticket number by email (Ideally, clients receive a QR code, but I tried to keep things simple)
+- Admin log in
+- Admins can view all ticket information and whither or not tickets were scanned
+- Admins can scan an image to prevent mutiple entries (Meaning simply entering the ticket number, in the real world, ushers would use a QR scanner)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Running the Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- As a prerequisite, set up the [server side](https://github.com/RamiB1234/mdlbeast-events-server) and ensures it's listenting for requests
+- Clone the repository
+- Run 'npm install' to install the needed packages
+- Run 'npm start' to start the development server
+- Navigate to `.env` file in the root directory and update the `REACT_APP_API_URL` accoarding to your server setup
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+The project is released under [MIT](https://github.com/RamiB1234/mdlbeast-events-front/blob/master/LICENSE) License
