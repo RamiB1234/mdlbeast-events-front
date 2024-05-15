@@ -29,7 +29,7 @@
           });
           const data = await response.json();
           if (response.ok) {
-            login(data.token);  // Using the login function from context
+            login(data.token, inputs.userName);  // Using the login function from context
             console.log('Login successful');
             navigate('/');  // Redirect to the home page
           } else {
