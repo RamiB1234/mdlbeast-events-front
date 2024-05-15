@@ -1,15 +1,18 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Buy = () => {
   const location = useLocation();
-  const [inputs, setInputs] = useState({ 'eventName': location.state.eventName });
+  const [inputs, setInputs] = useState({ 
+    eventName: location.state.eventName, 
+    name: '',  // Ensure this is initialized to handle disabling logic correctly
+    email: ''  // Ensure this is initialized to handle disabling logic correctly
+  });
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-
     const { name, value } = e.target;
-    setInputs((prevFormData) => ({ ...prevFormData, [name]: value }));
+    setInputs(prevFormData => ({ ...prevFormData, [name]: value }));
   }
 
   const handleSubmit = (event) => {
@@ -53,14 +56,13 @@ const Buy = () => {
               onChange={handleChange}
             />
           </div>
-          <input type='hidden' id='eventName' name='eventName' />
-          <button className="btn btn-primary">Pay</button>
+          <input type='hidden' id='eventName' name='eventName' value={inputs.eventName} />
+          <button className="btn btn-primary" disabled={!inputs.name || !inputs.email}>Pay</button>
         </form>
       </div>
       <div className="col-4"></div>
     </div>
   );
-
 };
 
 export default Buy;
