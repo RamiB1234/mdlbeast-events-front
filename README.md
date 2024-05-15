@@ -1,6 +1,6 @@
 # MDLBeast Events (Client)
 
-![Events](https://github.com/RamiB1234/mdlbeast-events-front/blob/master/README_Images/mdlBeastLogo.png?raw=true)
+![Events](https://github.com/RamiB1234/mdlbeast-events-front/blob/master/README_images/mdlBeastLogo.png?raw=true)
 
 This is the frontend of the event system. Please check the [server repository](https://github.com/RamiB1234/mdlbeast-events-server) as well.
 
@@ -23,8 +23,8 @@ The system is a simulation for an event/ticketing system that has the following 
 
 - As a prerequisite, set up the [server side](https://github.com/RamiB1234/mdlbeast-events-server) and ensures it's listenting for requests
 - Clone the repository
-- Run 'npm install' to install the needed packages
-- Run 'npm start' to start the development server
+- Run `npm install` to install the needed packages
+- Run `npm start` to start the development server
 - Navigate to `.env` file in the root directory and update the `REACT_APP_API_URL` accoarding to your server setup
 
 
